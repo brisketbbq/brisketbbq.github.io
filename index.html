@@ -50,9 +50,12 @@ table {
 
 /* Page Styles
 ************** */
+html, body {
+  height: 100%;
+  overflow: hidden;
+  }
 body {
   position: relative;
-  height: 100vh;
   font: 2.6vh "Helvetica Neue", "Helvetica", "Arial", sans-serif; color: #E7E7E7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
   background: #7E7169 url(img/cover.jpg) center center / cover no-repeat;
   }
@@ -82,7 +85,7 @@ address:before {
     }
 
   h1.logo { top: 4%; right: 15%; left: 15% }
-  h1.logo svg { width: 100%; height: auto; }
+  h1.logo svg { width: 100%; height: 100%; }
 
   address { top: auto; right: 5%; bottom: 10%; left: 5%; }
   address:before { font-size: 1.5em; }
