@@ -62,39 +62,77 @@ html, body {
   }
 body {
   position: relative;
-  font: 2.6vh "Helvetica Neue", "Helvetica", "Arial", sans-serif; color: #E7E7E7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-  background: #7E7169 url(img/cover.jpg) center center / cover no-repeat;
+  background: #3D3D3D url(img/bg.jpg) center center / cover no-repeat;
   }
 
-h1.logo {
-  position: absolute; top: 3.2vh; right: 2.666vw;
+.logo {
+  position: absolute; top: 46vh; left: 50vw;
+  margin: -10.8vh 0 0 -11.1vw;
   }
-h1.logo svg {
-  width: 23.333vw; height: 21.5vh;
+.logo svg {
+  width: 22.2vw; height: 21.5vh;
   fill: #FFF;
   }
 
-address {
-  position: absolute; top: 50vh; right: 2.666vw; left: 2.666vw;
+.tagline {
+  position: absolute; top: 89.5vh; left: 0; right: 0;
   text-align: center;
   }
-address:before {
-  content: 'Coming Soon';
-  display: block;
-  font-weight: bold; font-size: 2.77em; color: #FFF; text-transform: uppercase; text-shadow: 0 0 4px rgba(73,74,78,.45);
+.tagline img {
+  height: 3.5vh;
   }
 
-@media screen and (max-device-width: 750px) {
-  body {
-    font-size: 4em;
-    background-position: 61.5% 0; background-size: auto 128%;
+address {
+  position: absolute; top: 90vh; left: 12.5vw; right: 16vw;
+  display: flex; align-items: center; justify-content: space-between;
+  }
+
+address img { height: 3vh; }
+
+.socials {
+  position: absolute; top: 90vh; right: 3.8vw;
+  }
+.socials a {
+  display: inline-block;
+  margin-left: 0.7vw;
+  }
+.socials img {
+  display: block;
+  width: 3.33vh; height: 3.33vh;
+  }
+
+@media screen and (max-device-width: 750px) and (orientation: portrait) {
+  .logo {
+    top: 27%; right: 15%; left: 15%;
+    margin: 0;
+    }
+  .logo svg { width: 100%; height: 100%; }
+
+  .tagline {
+    top: 65%; right: 15%; left: 15%;
+    }
+  .tagline img {
+    width: 100%; height: auto;
     }
 
-  h1.logo { top: 4%; right: 15%; left: 15% }
-  h1.logo svg { width: 100%; height: 100%; }
+  address {
+    top: 75%; right: 15%; left: 15%;
+    flex-direction: column;
+    }
+  address img {
+    margin-bottom: 1vh;
+    }
 
-  address { top: auto; right: 5%; bottom: 10%; left: 5%; }
-  address:before { font-size: 1.5em; }
+  .socials {
+    top: 87%; right: 15%; left: 15%;
+    text-align: center;
+    }
+  .socials a {
+    margin: 0 3vw;
+    }
+  .socials img {
+    width: 13vw; height: 13vw;
+    }
   }
   </style>
 </head>
@@ -110,8 +148,18 @@ address:before {
     </svg>
   </h1>
 
+  <section class="tagline">
+    <img src="img/tagline.svg" alt="Real Texas BBQ">
+  </section>
+
   <address>
-    Москва, Смоленский бульвар,&nbsp;15
+    <img src="img/address.svg" class="address" alt="Москва, Смоленский бульвар,&nbsp;15">
+    <img src="img/phone.svg" class="phone" alt="+7 (964) 647-01-07">
   </address>
+
+  <footer class="socials">
+    <a href="https://www.facebook.com/brisketbbq/" target="_blank"><img src="img/fb.svg"></a>
+    <a href="https://www.instagram.com/brisketbbq/" target="_blank"><img src="img/instagram.svg"></a>
+  </footer>
 </body>
 </html>
